@@ -8,19 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let people = ["Jonh", "Mark", "Joe"]
+    
     var body: some View {
-        List {
-            Section {
-                ForEach(0..<5) {
-                    Text("Dynamic Row \($0)")
-                }
-            }
-            
-            Section {
-                ForEach(6..<9) {
-                    Text("Dynamic Row \($0)")
-                }
-            }
+        List(people, id: \.self) {
+            Text($0)
         }
     }
 }
