@@ -16,6 +16,14 @@ struct ContentView: View {
             Text($0)
         }
     }
+    
+    func testBundles() {
+        if let fileUrl = Bundle.main.url(forResource: "somefile", withExtension: "txt") {
+            if let fileContents = try? String(contentsOf: fileUrl) {
+                
+            }
+        }
+    }
 }
 
 #Preview {
